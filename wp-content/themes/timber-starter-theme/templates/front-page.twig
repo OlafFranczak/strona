@@ -1,0 +1,137 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<div class="content-wrapper">
+		
+		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+
+			<section class="article-content">
+				
+				<header>
+					<div id="head-container">
+						<div id="h-logo">
+							<a>
+								<img src="{{ asset('images/logo.webp') }}" alt="Logo" />
+							</a>
+						</div>
+						<div class="header-icons">
+							
+							<div class="svg">
+								<a href="tel:+48794112358">
+									<img src="{{ asset('images/tel.webp') }}">
+								</a>
+							</div>
+				
+							<div class="svg">
+								<a href="mailto:brodnet@brodnet.pl">
+									<img src="{{ asset('images/mail.webp') }}">
+								</a>
+							</div>
+				
+							<div class="svg">
+								<a href="#contact">
+									<img src="{{ asset('images/kontakt.webp') }}">
+								</a>
+							</div>
+						</div>
+					</div>
+				</header>
+
+				<main>
+					<div>
+						<div class="fancy-letter">S</div>	
+						<div class="intro">
+							Specjalizujemy się w tworzeniu
+							stron internetowych, sklepów
+							oraz aplikacji mobilnych
+						</div>
+						<div class="intro-text">Aktualnie pracujemy nad ulepszeniem naszej strony, aby w jak najlepszy sposób zaprezentować jakość naszych usług.</div>
+						<div class="contact-hyperlink">
+							Zapraszamy do kontaktu <img src="{{ asset('images/main-arrow.svg') }}" alt="->">
+						</div>
+					</div>
+
+				</main>
+
+				<section class="realizacje">
+					<img src="{{ asset('images/realizacje.webp') }}">
+				</section>
+
+				<section class="offer">
+					<div class="offer-heading">
+						<span>Nasza oferta obejmuje</span> <div class="fancy-block"></div>
+					</div>
+					<div class="offer-container">
+						<div class="offer-box">
+							<p>Identyfikacje wizualne</p>
+							<div>
+								Tworzymy spójną i unikalną identyfikację wizualną dla Twojej marki, która pozwoli na wyróżnienie się na rynku. Projektujemy logo, kolorystykę, czcionki oraz inne elementy graficzne, które będą kojarzone z Twoją firmą.
+							</div>
+						</div>
+						<div class="offer-box">
+							<p>Materiały promocyjne</p>
+							<div>
+								Zapewniamy projektowanie profesjonalnych materiałów promocyjnych, takich jak wizytówki, koperty, papier firmowy oraz inne elementy, które pozwolą na utrzymanie spójnego wizerunku Twojej marki. Nasze projekty są estetyczne, czytelne i zapadające w pamięć.
+							</div>
+						</div>
+						<div class="offer-box">
+							<p>Projekty na social media</p>
+							<div>
+								Zajmujemy się projektowaniem grafik na potrzeby do mediów społecznościowych. Tworzymy posty, bannery oraz reklamy, które będą skuteczne w promowaniu Twoich produktów lub usług.
+							</div>
+						</div>
+						<div class="offer-box">
+							<p>Strony internetowe i ecommerce</p>
+							<div>
+								Tworzymy również funkcjonalne i estetyczne strony internetowe i aplikacje, zoptymalizowane pod kątem pozycjonowania w wyszukiwarkach internetowych, w tym sklepy internetowe. Jesteśmy zespołem profesjonalistów, którzy chętnie doradzą i pomogą w każdym etapie realizacji projektu, od koncepcji, przez projektowanie i programowanie, aż do wdrożenia.
+							</div>
+						</div>
+						<div class="offer-box">
+							<p>Programowanie aplikacji i systemów</p>
+							<div>
+								Oferujemy profesjonalne programowanie aplikacji i systemów webowych, zoptymalizowanych pod kątem wydajności i bezpieczeństwa oraz dostosowanych do potrzeb naszych klientów. Nasz zespół programistów specjalizuje się w różnych technologiach webowych, dzięki czemu jesteśmy w stanie stworzyć aplikacje i systemy o różnej złożoności. Pomagamy w każdym etapie realizacji projektu, od koncepcji, przez projektowanie i programowanie, aż do wdrożenia i utrzymania aplikacji i systemów.
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="contact" id="contact">
+					<div class="contact-info">
+						<h2>Skontaktuj sie z nami</h2>
+						<div class="fancy-letter">S</div>
+						<div class="podrz">
+							Jeśli potrzebujesz pomocy w projektowaniu i tworzeniu swojej strony internetowej, skontaktuj się z nami. Chętnie pomożemy Ci osiągnąć sukces w internecie i zdobyć przewagę konkurencyjną.
+						</div>
+
+						<div id="info-container">
+							<div class="info">
+								<div>
+									<p>Dział sprzedaży:</p>
+										+48 794 112 358<br>
+										brodnet@brodnet.pl
+								</div>
+								<div>								
+									<p>Obsługa klienta:</p>
+										+48 792 523 072<br>
+										+48 697 111 731
+								</div>
+								<div>								
+									<p>
+										<span>BrodNet /</span> Aplikacje Internetowe
+									</p>
+										ul. Bydgoska 14<br>
+										89-620 Pawłówko<br>
+										NIP PL 555 212 40 33
+									<div>
+									Nasze biuro jest czynne od poniedziałku do piątku w godzinach od 8:00 do 16:00.
+									</div>
+								</div>
+							</div>
+							{{ include('comment-form.twig') }}	
+						</div>
+					</div>
+				</section>	
+			</section>
+		</article>
+	</div>
+{% endblock %}

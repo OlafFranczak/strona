@@ -1,0 +1,473 @@
+@import "variables";
+@import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap');
+
+
+body {
+    font-family: Poppins, Arial, sans-serif;
+    background-color: $brodnet-dark;
+    width: 100%;
+    margin: 0;
+    color: $brodnet-gray2;
+}
+
+
+header {
+    padding: 2rem;
+    border-bottom: 1px solid $brodnet-gray;
+    div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        div:first-child {
+            a {
+                img {
+                    height: 2.5rem;
+                    width: auto;
+                }
+            }
+        }
+    }
+}
+
+.header-icons {
+    display: flex;
+    justify-content: space-between;
+}
+.svg {
+    width: 0.5rem;
+    height: 0.5rem;
+    fill: $brodnet-accent;
+}
+
+
+.fancy-block {
+    height: 1rem;
+    width: 4rem;
+    background-color: $brodnet-accent;
+}
+
+.realizacje {
+    margin: 2rem 0 0;
+    img {
+        width: 100%;
+    }
+}
+
+
+.offer {
+    margin: 4rem;
+    &-heading {
+        font-size: 2.8rem;
+        color: #FFF;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: bold;
+        margin: 0 0 4rem;
+    }
+
+    &-box {
+        width: 23rem;
+        height: auto;
+        color: $brodnet-heading-gray;
+        font-size: 1.2rem;
+        p {
+            font-size: 2rem;
+            color: #FFF;
+            margin: 0 0 3rem;
+        }
+    }
+
+    &-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+    }
+}
+
+
+.intro {
+    font-size: 2.4rem;
+    color: #FFF;
+}
+
+.intro-text {
+    color: #FFF;
+    font-size: 1.4rem;
+    margin: 4rem 0 2rem;
+}
+
+
+.contact-hyperlink {
+    display: flex;
+    gap: 1.5rem;
+    color: $brodnet-accent;
+    font-size: 1.6rem;
+    width: fit-content;
+    max-width: 100%;
+}
+
+.arrow {
+    width: fit-content;
+}
+
+
+main {
+    padding: 4rem 4rem 0;
+    div {
+        position: relative;
+    }
+}
+
+.fancy-letter {
+    width: fit-content;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: $brodnet-accent;
+    color: transparent;
+    font-size: 8.25rem;
+    top: -0.35em;
+    line-height: 1;
+    left: -0.2em;
+    font-weight: 600;
+    position: absolute;
+}
+
+#info-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.contact {
+    color: white;
+    padding: 2rem;
+    background: $brodnet-lighter-dark;
+    width: 100%;
+
+    .contact-info {
+        margin: 4rem 0;
+        position: relative;
+
+        .podrz {
+            margin: 1rem 10rem 0 0;
+            font-size: 1.2rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .info {
+            margin: 4rem 0;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
+            div {
+                font-size: 1.2rem;
+                p {
+                    font-size: 1.6rem;
+                    color: $brodnet-accent;
+                }
+            }
+            div:last-child {
+                p {
+                    color: $brodnet-accent;
+                    font-size: 1.6rem;
+                    span {
+                        font-size: 1.6rem;
+                        color: #FFF;
+                        font-weight: bold;
+                    }
+                }
+                font-size: 1.2rem;
+                div {
+                    color: $brodnet-heading-gray;
+                    font-size: 1rem;
+                    margin: 1rem 0;
+                }
+            }
+        }
+    }
+
+    div {
+        h3 {
+            font-weight: bold;
+            font-size: 2.5rem;
+            margin: 4rem 0 2rem;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.2rem;
+
+            input {
+                height: 3.5rem;
+                width: auto;
+                padding: 1.5rem;
+                color: $brodnet-gray2;
+            }
+
+            div {
+                display: flex;
+                justify-content: space-between;
+
+                label {
+                    display: flex;
+                    gap: 1rem;
+                    align-items: center;
+
+                    input {
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        background: $brodnet-accent;
+                        accent-color: $brodnet-accent;
+                        border: 1px solid #e2e2e2;
+                        margin-bottom: 0;
+                    }
+                }
+
+                button {
+                    text-transform: uppercase;
+                    color: $brodnet-accent;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1.5rem;
+                    gap: 1rem;
+
+                    div {
+                        font-weight: 300;
+                    }
+                }
+            }
+
+            textarea {
+                padding: 1.5rem;
+            }
+        }
+    }
+}
+
+
+footer {
+    color: $brodnet-gray2;
+    margin: 2rem;
+
+    a {
+        text-decoration: none;
+        font-weight: bold;
+        color: $brodnet-gray2;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    header {
+        padding: 2rem;
+        border-bottom: 1px solid $brodnet-gray;
+        div {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+    
+            div:first-child {
+                a {
+                    img {
+                        height: 2.5rem;
+                        width: auto;
+                    }
+                }
+            }
+        }
+    }
+    
+    .header-icons {
+        display: flex;
+        justify-content: space-between;
+    }
+    .svg {
+        width: 0.5rem;
+        height: 0.5rem;
+        fill: $brodnet-accent;
+    }
+
+    body {
+        background-color: $brodnet-dark;
+        width: 100%;
+    }
+
+    main {
+        width: 100%;
+        display: grid;
+        justify-items: stretch;
+    }
+
+    .fancy-letter {
+        font-size: 4rem;
+    }
+
+    .intro {
+        font-size: 1.2rem;
+    }
+
+    .offer {
+        width: 100%;
+
+        :not(.offer-heading) {
+            display: grid;
+            grid-template-columns: 1fr;
+            place-items: center;
+        }
+    }
+
+    .realizacje {
+        img {
+            width: 100%;
+        }
+    }
+
+    #info-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    header {
+        padding: 2rem;
+        border-bottom: 1px solid $brodnet-gray;
+        div {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+    
+            div:first-child {
+                a {
+                    img {
+                        height: 2.5rem;
+                        width: auto;
+                    }
+                }
+            }
+        }
+    }
+    
+    .header-icons {
+        display: flex;
+        justify-content: space-between;
+    }
+    .svg {
+        width: 0.5rem;
+        height: 0.5rem;
+        fill: $brodnet-accent;
+    }
+
+    .offer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .offer-box {
+        width: 100%;
+        margin: 0 0 2rem;
+    }
+
+    .fancy-letter {
+        font-size: 3.5rem;
+    }
+
+    .intro {
+        font-size: 1.8rem;
+    }
+
+    .contact {
+        .contact-info {
+            .podrz {
+                margin: 1rem 0 0;
+            }
+            .info {
+                div:last-child {
+                    div {
+                        font-size: 1rem;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    header {
+        padding: 2rem;
+        border-bottom: 1px solid $brodnet-gray;
+        div {
+            display: grid;
+            grid-template-columns: 1fr;
+            row-gap: 1rem;
+    
+            div:first-child {
+                a {
+                    img {
+                        height: 2.5rem;
+                        width: auto;
+                    }
+                }
+            }
+        }
+    }
+    
+    .header-icons {
+        display: flex;
+        justify-content: space-between;
+    }
+    .svg {
+        width: 0.2rem;
+        height: 0.2rem;
+        fill: $brodnet-accent;
+    }
+
+    .offer {
+        margin: 2rem 0;
+        padding: 2rem;
+    }
+
+    .offer-heading {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .offer-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .realizacje {
+        margin: 1rem 0;
+    }
+
+    .contact {
+        padding: 2rem;
+
+        div {
+            h3 {
+                font-size: 2rem;
+            }
+
+            form {
+                div {
+                    label {
+                        input {
+                            width: 1.2rem;
+                            height: 1.2rem;
+                        }
+                    }
+
+                    button {
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+<div id="comment-form">
+    <h3>Porozmawiajmy!</h3>
+    <form class="comment-form" method="post" action="{{ site.site_url~'/wp-comments-post.php' }}">
+        {% if  user %}
+            <input required type="text" name="author" placeholder="Imię i Nazwisko *">
+            <input required type="text" name="email" placeholder="Adres email *">
+            <input required type="text" name="telefon"  placeholder="Telefon *">
+        {% else %}
+            <input required name="author" type="text" placeholder="Imię i Nazwisko *">
+            <input required name="email" type="email" id="email" placeholder="Adres email *">
+            <input required type="text" name="telefon"  placeholder="Telefon *">
+        {% endif %}
+            <textarea placeholder="Napisz wiadomość *" name="comment" cols="60" rows="3"></textarea>
+        </label>
+        <input name="comment_post_ID" value="{{ post.id }}" type="hidden">
+        <input name="comment_parent"  value="{{ comment.ID|default('0') }}" type="hidden">
+        <div>
+            <label><input required type="checkbox" name="policy"><a>Akceptuję politykę prywatności.</a></label>
+            <button type="submit" name="Submit" class="btn">Wyślij<img src="{{ asset('images/main-arrow.svg') }}" alt="->"></button>
+        </div>
+
+        
+    </form>
+</div>
